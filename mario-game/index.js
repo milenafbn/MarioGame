@@ -1,7 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-console.log(c)
 
+canvas.width = innerWidth //tag canvas takes up the full width
+canvas.height = innerHeight
 //create a player with a class named player
 class Player{
     constructor(){
