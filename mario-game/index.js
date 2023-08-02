@@ -69,6 +69,8 @@ const keys = {
     }
 }
 
+let scrollOffset = 0 //deslocamento de rolagem
+
 function animate() {
     requestAnimationFrame(animate)
     c.clearRect(0, 0, canvas.width, canvas.height) //limpa toda a tela
@@ -85,15 +87,20 @@ function animate() {
         player.velocity.x = 0
 
         if (keys.right.pressed) {
+            scrollOffset += 5
             platforms.forEach((platform) => {
                 platform.position.x -= 5
             })
         } else if (keys.left.pressed) {
+            scrollOffset -= 5
             platforms.forEach((platform) => {
                 platform.position.x += 5
             })
         }
     }
+
+    //console.log(scrollOffset)
+
     //platform collision detection
     platforms.forEach((platform) => {
         if (player.position.y + player.height <= platform.position.y 
@@ -104,6 +111,10 @@ function animate() {
             player.velocity.y = 0
         }
     })
+
+    if (scrollOffset > 2000) {
+        console.log('YOU WIN!')
+    }
 }           
 
 animate()
