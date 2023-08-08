@@ -1,0 +1,8 @@
+{
+    "name": "MarioGame",
+    "version": "1.0.0",
+    "description": "Descrição do seu projeto",
+    "dependencies": {
+        "canvas": "^2.11.2"
+    }
+}

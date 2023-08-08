@@ -1,3 +1,6 @@
+import {myplatform} from './img/myplatform.png';
+console.log(myplatform)
+
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
@@ -5,7 +8,7 @@ canvas.width = innerWidth //tag canvas takes up the full width
 canvas.height = innerHeight
 //create a player with a class named player
 
-const gravity = 0.5
+const gravity = 1.5
 class Player{
     constructor(){
         //propriedades do jogador. Aqui ele vai ser um quadrado
@@ -24,7 +27,7 @@ class Player{
     //method draw: desenhando o personagem
 
     draw() {
-        c.fillStyle = 'blue'
+        c.fillStyle = 'red'
         c.fillRect(this.position.x, this.position.y, this.width, this.height)
     }
 
