@@ -42,6 +42,7 @@ class Player{
     }
 }
 
+
 class Platform{
     constructor({x,y}){ // ({ }) é um objeto, não argumentos tipo x,y apenas
         this.position = {
